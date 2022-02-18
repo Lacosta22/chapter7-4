@@ -13,11 +13,6 @@
 var delivInfo = {}
 var delivSummary = document.getElementById("deliverTo");
 
-function previewOrder() {
-   processDeliveryInfo();
-   document.getElementsByTagName("section")[0].style.display = "block";
-}
-
 function processDeliveryInfo() {
    var prop;
    delivInfo.name = document.getElementById("nameinput").value;
@@ -30,7 +25,10 @@ function processDeliveryInfo() {
    }
    document.getElementById("deliverTo").style.display = "block";
 }
-
+function previewOrder() {
+   processDeliveryInfo();
+   document.getElementsByTagName("section")[0].style.display = "block";
+}
 // create event listeners
 function createEventlisteners() {
    var previewBtn = document.getElementById("previewBtn");
